@@ -1,0 +1,22 @@
+<h1><%= @restaurant.name %></h1>
+
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.phone_number %></p>
+<p><%= @restaurant.category.capitalize %> Cuisine</p>
+
+<%= link_to 'Delete Restaurant', restaurant_path, method: :delete  %>
+<br>
+<%= link_to 'Edit Restaurant', edit_restaurant_path  %>
+<br>
+<%= link_to "Home Page", restaurants_path %>
+<br>
+<br>
+<%= link_to "Write A Review!", new_restaurant_review_path(@restaurant) %>
+
+<br>
+<h2>Reviews:</h2>
+<% @reviews.each do |review| %>
+<ul>
+  <li><%= review.content %> Rating: <%= review.rating %> </li>
+</ul>
+<% end %>

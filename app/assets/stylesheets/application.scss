@@ -1,0 +1,42 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+body {
+  background-color: #e5dfdf;
+}
+nav {
+  height: 32px;
+  background-color: #6ba8a9;
+  padding: 0px 8px;
+  a {
+    font-size:  24px;
+    color: #e5dfdf;
+    &:hover{
+  text-decoration: none;
+  color: #e5dfdf;
+}
+  }
+}
+
+a {
+color: #6ba8a9;
+&:hover{
+  text-decoration: none;
+  font-weight: bolder;
+  color: #357376;
+}
+}
+
+li {
+  list-style: none;
+}
